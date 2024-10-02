@@ -8,7 +8,10 @@ Additionally, it can find the eccentricity, radius, and diameter of the graph.
 
 Given the instructions to generate a simple, connected, weighted, directional graph with N vertices and
 between N-1 and N(N-1) edges, the random generator will in some cases only be able to generate a weakly/unilaterally
-connected digraph. Hence, in some cases, the concept of eccentricity is limited to the greatest
+connected digraph. The implementation is based on a minimal spanning tree to ensure connectivity and this approach
+does not ensure strong connectivity in the graph. This choice is based on there not being a requirement for a strongly 
+connected graph.
+Hence, in some cases, the concept of eccentricity is limited to the greatest
 distance between a vertex and the vertices where a path exists.
 For example, in a directed graph with 4 vertices and 3 edges, strong connectivity is not possible due to the given
 number of vertices and edges. This means that the radius of the graph will
