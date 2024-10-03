@@ -5,17 +5,18 @@
   (:gen-class))
 
 (defn usage []
-  (println "Usage: lein run [--print-graph] <flag> <N> <S> [start-node end-node]")
-  (println "Where flags are:")
-  (println "  --shortest-path        : Calculate the shortest path between the start and end nodes. Requires start-node and end-node.")
-  (println "  --eccentricity         : Calculate the eccentricity of a node (optional start-node, defaults to first node).")
-  (println "  --radius               : Calculate the radius of the graph.")
-  (println "  --diameter             : Calculate the diameter of the graph.")
-  (println "  --print-graph          : Optional flag to print the generated graph before calculations.")
-  (println "  <N> is the number of vertices.")
-  (println "  <S> is the number of edges.")
-  (println "  [start-node] and [end-node] are optional parameters for the shortest-path action.")
-  (println "  [start-node]  is optional parameter for eccentricity action."))
+  (println
+   "Usage: lein run [--print-graph] <flag> <N> <S> [start-node end-node]\n"
+   "Where flags are:\n"
+   "  --shortest-path        : Calculate the shortest path between the start and end nodes. Requires start-node and end-node.\n"
+   "  --eccentricity         : Calculate the eccentricity of a node (optional start-node, defaults to first node).\n"
+   "  --radius               : Calculate the radius of the graph.\n"
+   "  --diameter             : Calculate the diameter of the graph.\n"
+   "  --print-graph          : Optional flag to print the generated graph before calculations.\n"
+   "  <N> is the number of vertices.\n"
+   "  <S> is the number of edges.\n"
+   "  [start-node] and [end-node] are optional parameters for the shortest-path action.\n"
+   "  [start-node]  is optional parameter for eccentricity action."))
 
 (defn print-graph [graph]
   "Helper function to print the generated graph in a readable format."
